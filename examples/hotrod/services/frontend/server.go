@@ -50,7 +50,7 @@ type ConfigOptions struct {
 
 // NewServer creates a new frontend.Server
 func NewServer(options ConfigOptions, tracer opentracing.Tracer, logger log.Factory) *Server {
-	assetFS := FS(false)
+	assetFS := FS(true)
 	return &Server{
 		hostPort: options.FrontendHostPort,
 		tracer:   tracer,
